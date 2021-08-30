@@ -1,0 +1,135 @@
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'montserrat', sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul, li {
+  list-style: none;
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 10vh;
+  -webkit-transition: .25s ease-out;
+  transition: .25s ease-out;
+}
+
+nav.active {
+  background-color: #fff;
+}
+
+nav.active a {
+  color: #000;
+}
+
+nav li {
+  position: relative;
+}
+
+nav li::before {
+  content: "";
+  width: 105%;
+  height: .5rem;
+  background: #1B748A;
+  position: absolute;
+  bottom: -20%;
+  left: -2%;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transition: .25s ease-out;
+  transition: .25s ease-out;
+}
+
+nav .nav-list li:hover::before,
+nav .nav-list li.active::before {
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+}
+
+nav ul {
+  height: 100%;
+  width: 80%;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+nav ul a {
+  font-size: 2rem;
+  letter-spacing: .3rem;
+  cursor: pointer;
+  color: #fff;
+  text-transform: uppercase;
+  -webkit-transition: .25s ease-out;
+  transition: .25s ease-out;
+}
+
+nav ul a:hover {
+  color: #B1B2AD;
+}
+
+section {
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #fff;
+  font-size: 5rem;
+  text-transform: uppercase;
+  letter-spacing: .3rem;
+}
+
+#base {
+  background-color: #251A23;
+}
+
+#home {
+  background-color: #421C25;
+}
+
+#work {
+  background-color: #5C111A;
+}
+
+#about {
+  background-color: #7B4A0B;
+}
+
+#contact {
+  background-color: #8F6805;
+}
+/*# sourceMappingURL=style.css.map */
